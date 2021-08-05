@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 style="color: {{ color_1 }}; background-color: {{ color_2 }}">***  Checkerboard  ***</h1>
+    <div class="container">
+        {% for y in range(boxes_y): %}
+            {% if y % 2 == 0: %}
+            <div class="row">
+                {% for x in range(boxes_x): %}
+                    {% if x % 2 == 0: %}
+                    <div class="box2" style="background-color: {{ color_2 }}; height: 50px; width: 50px"></div>
+                    {% else: %}
+                    <div class="box1" style="background-color: {{ color_1 }}; height: 50px; width: 50px"></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% else: %}
+            <div class="row">
+                {% for x in range(boxes_x): %}
+                    {% if x % 2 == 0: %}
+                    <div class="box1" style="background-color: {{ color_1 }}; height: 50px; width: 50px"></div>
+                    {% else: %}
+                    <div class="box2" style="background-color: {{ color_2 }}; height: 50px; width: 50px"></div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</body>
+</html>

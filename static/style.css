@@ -1,0 +1,36 @@
+* {
+    align-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    height: 60px;
+    width: 50%;
+    letter-spacing: 0.2em;
+    margin: auto;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: blanchedalmond;
+    border: 2px solid black;
+}
